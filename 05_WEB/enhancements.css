@@ -36,3 +36,76 @@
   box-shadow: 0 1px 4px #0008;
 }
 .parcel-label::before { display: none; }
+.parcel-number-option { padding-left: 20px; }
+.parcel-number-swatch {
+  width: 22px;
+  color: #00c8ff;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 800;
+  text-align: center;
+}
+.view-mode-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 11px;
+  border: 1px solid #4a9eff;
+  border-radius: 6px;
+  background: #0f3460;
+  color: #eef6ff;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.view-mode-btn:hover, .view-mode-btn.active { background: #e63030; border-color: #e63030; }
+#map3d { flex: 1; min-width: 0; position: relative; }
+.map3d-hidden { display: none; }
+.terrain-status { position: absolute; top: 14px; left: 50%; transform: translateX(-50%); z-index: 950; padding: 8px 13px; border-radius: 18px; background: #16213eef; color: #fff; font-size: 11px; box-shadow: 0 2px 10px #0008; }
+.maplibregl-ctrl-group { background: #16213e; }
+.maplibregl-ctrl-group button { filter: invert(1); }
+.maplibregl-popup-content { background: #16213e; color: #e0e0e0; border-radius: 8px; padding: 12px; }
+.maplibregl-popup-tip { border-top-color: #16213e !important; border-bottom-color: #16213e !important; }
+@media (max-width: 768px) { .view-mode-btn { padding: 7px 9px; font-size: 0; } .view-mode-btn span { font-size: 18px; } }
+.warehouse-swatch, .warehouse-marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  background: #1f2937;
+  border: 2px solid #f59e0b;
+  color: #fff;
+  font-style: normal;
+  font-weight: 900;
+  box-shadow: 0 1px 5px #0008;
+}
+.warehouse-swatch { width: 18px; height: 18px; border-radius: 4px; font-size: 8px; }
+.warehouse-marker { width: 32px; height: 32px; border-radius: 7px; font-size: 11px; }
+.measure3d-btn { color: #111; font-size: 19px; font-weight: 800; }
+.measure3d-btn.active { background: #e63030 !important; color: #fff; }
+.wait-swatch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 19px;
+  height: 19px;
+  flex: none;
+  border-radius: 50%;
+  background: #f4c542;
+  border: 2px solid #111827;
+  color: #111827;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 900;
+}
+.wait-label {
+  background: #f4c542 !important;
+  border: 2px solid #111827 !important;
+  border-radius: 11px !important;
+  color: #111827 !important;
+  font-size: 10px !important;
+  font-weight: 900 !important;
+  padding: 2px 6px !important;
+  box-shadow: 0 1px 5px #0008;
+}
+.wait-label::before { display: none; }

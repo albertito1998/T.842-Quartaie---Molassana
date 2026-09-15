@@ -1,0 +1,15 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Magazzino Terna Rete Italia SpA",
+        "address": "Via Cristoforo Colombo, 26 - 16040 San Colombano Certenoli (GE) - Italia",
+        "source": "Geocodifica ArcGIS World Geocoding Service",
+        "score": 97.97
+      },
+      "geometry": { "type": "Point", "coordinates": [9.314978061856, 44.369143705987] }
+    }
+  ]
+}

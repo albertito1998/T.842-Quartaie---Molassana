@@ -1,0 +1,15 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {"type":"Feature","properties":{"vano":"243-244","numero_sfere":3},"geometry":{"type":"LineString","coordinates":[[9.185430,44.431781],[9.181219,44.433001]]}},
+    {"type":"Feature","properties":{"vano":"256-257","numero_sfere":5},"geometry":{"type":"LineString","coordinates":[[9.155250,44.434847],[9.151376,44.436331]]}},
+    {"type":"Feature","properties":{"vano":"279-280","numero_sfere":3},"geometry":{"type":"LineString","coordinates":[[9.099202,44.439473],[9.094494,44.440194]]}},
+    {"type":"Feature","properties":{"vano":"285-286","numero_sfere":3},"geometry":{"type":"LineString","coordinates":[[9.085703,44.441538],[9.081243,44.442218]]}},
+    {"type":"Feature","properties":{"vano":"287-288","numero_sfere":4},"geometry":{"type":"LineString","coordinates":[[9.079011,44.442561],[9.074887,44.443430]]}},
+    {"type":"Feature","properties":{"vano":"288-289","numero_sfere":2},"geometry":{"type":"LineString","coordinates":[[9.074887,44.443430],[9.072295,44.443975]]}},
+    {"type":"Feature","properties":{"vano":"291-292","numero_sfere":5},"geometry":{"type":"LineString","coordinates":[[9.068302,44.444654],[9.064423,44.444821]]}},
+    {"type":"Feature","properties":{"vano":"295-296","numero_sfere":3},"geometry":{"type":"LineString","coordinates":[[9.057515,44.445864],[9.054640,44.446551]]}},
+    {"type":"Feature","properties":{"vano":"304-305","numero_sfere":5},"geometry":{"type":"LineString","coordinates":[[9.038206,44.452645],[9.034078,44.453622]]}},
+    {"type":"Feature","properties":{"vano":"316-317","numero_sfere":5},"geometry":{"type":"LineString","coordinates":[[9.013809,44.458427],[9.010204,44.458339]]}}
+  ]
+}

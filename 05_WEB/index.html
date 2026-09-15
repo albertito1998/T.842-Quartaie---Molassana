@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#063f87">
+  <title>WebGIS Quartaie–Molassana | ELECNOR</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark"></span><div><strong>ELECNOR</strong><small>Progetto 23842B1</small></div></div>
+    <div class="title"><h1>Linea 132 kV Quartaie–Molassana</h1><p>Piano di stendimento · WebGIS di progetto</p></div>
+    <div class="status"><span class="pulse"></span>Stato aggiornamento: 15.09.2026</div>
+  </header>
+  <main>
+    <aside id="sidebar" class="sidebar">
+      <section class="search-card">
+        <label for="tower-search">Ricerca sostegno</label>
+        <div class="search-row"><input id="tower-search" placeholder="Es. 267 o Molassana"><button id="search-btn">Cerca</button></div>
+        <div id="search-result" class="search-result" aria-live="polite"></div>
+      </section>
+      <section>
+        <h2>Quadro del progetto</h2>
+        <div class="metrics">
+          <div><b id="metric-towers">—</b><span>Sostegni</span></div>
+          <div><b>6</b><span>Tirate</span></div>
+          <div><b>400 m</b><span>Buffer</span></div>
+        </div>
+      </section>
+      <section>
+        <h2>Legenda</h2>
+        <div class="legend-grid">
+          <span><i class="swatch tower anchor"></i>Amarro</span><span><i class="swatch tower suspension"></i>Sospensione</span>
+          <span><i class="swatch line-axis"></i>Asse linea</span><span><i class="swatch machine"></i>Aree macchine</span>
+          <span><i class="swatch access"></i>Accessi temporanei</span><span><i class="swatch flood"></i>Pericolosità alluvionale</span>
+          <span><i class="swatch habitat"></i>Habitat Natura 2000</span><span><i class="swatch parcel"></i>Catasto</span>
+        </div>
+      </section>
+      <section class="documents">
+        <h2>Documenti</h2>
+        <a href="assets/pdf/23842B1_Piano_di_stendimento.pdf" target="_blank">Piano di stendimento (PDF)</a>
+        <a href="assets/pdf/23842B1_Piano_di_stendimento.xlsx">Piano di stendimento (Excel)</a>
+      </section>
+      <section class="note"><strong>Nota</strong><p>Strumento operativo di consultazione. Le geometrie non sostituiscono gli elaborati esecutivi approvati.</p></section>
+    </aside>
+    <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Apri o chiudi pannello">☰</button>
+    <div id="map"></div>
+    <div id="loading" class="loading"><span></span>Caricamento dati…</div>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+</html>

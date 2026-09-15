@@ -1,0 +1,33 @@
+# System files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# QGIS temporary/backups
+*.qgz~
+*.qgs~
+*_backup*.qgz
+*_backup*.qgs
+*.tmp
+*.bak
+ErrorReports/
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Large/generated local exports - add intentionally when needed
+10_DEPLOY/*.zip
+06_ATLAS/screenshots/*
+!06_ATLAS/screenshots/.gitkeep
+06_ATLAS/exports_pdf/*
+!06_ATLAS/exports_pdf/.gitkeep
+
+# Local secrets/config
+.env
+*.local

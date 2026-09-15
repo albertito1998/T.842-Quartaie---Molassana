@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "habitat_natura2000",
+"xy_coordinate_resolution": 1e-06,
+"features": [
+{ "type": "Feature", "properties": { "id": "L2946.51537", "ogr_fid": 11338, "habitat": "71", "hab_legenda": "71", "desc_hab_legenda": "Aree con dominanza o presenza dell'habitat 9340 (Foreste di Quercus ilex)", "cod_legenda_wms": "u", "desc_legenda_wms": "Habitat forestali a gravitazione mediterranea di latifoglie sempreverdi", "sigla": "71", "rif_norma": "Habitat compresi nell'Allegato I della Direttiva 92/43 (e s.m.e i.)", "etichetta": "71", "id_classe_web": 1, "id_staz": 51537 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 8.979522, 44.448398 ], [ 8.979434, 44.448263 ], [ 8.979761, 44.448254 ], [ 8.980012, 44.448435 ], [ 8.980201, 44.448534 ], [ 8.980465, 44.448606 ], [ 8.980653, 44.448741 ], [ 8.980779, 44.448831 ], [ 8.980904, 44.448876 ], [ 8.981093, 44.448921 ], [ 8.981935, 44.449632 ], [ 8.982148, 44.450172 ], [ 8.982035, 44.450641 ], [ 8.981909, 44.450722 ], [ 8.981356, 44.451145 ], [ 8.980715, 44.451109 ], [ 8.980464, 44.451018 ], [ 8.979949, 44.450703 ], [ 8.979635, 44.450442 ], [ 8.979358, 44.449857 ], [ 8.979233, 44.449767 ], [ 8.978969, 44.449497 ], [ 8.978893, 44.449137 ], [ 8.979195, 44.448488 ], [ 8.979258, 44.448398 ], [ 8.979522, 44.448398 ] ] ] } }
+]
+}

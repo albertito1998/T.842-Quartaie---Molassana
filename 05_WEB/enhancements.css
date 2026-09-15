@@ -1,0 +1,38 @@
+.popup-plan-section {
+  margin-top: 9px;
+  padding-top: 8px;
+  border-top: 1px solid #ffffff22;
+}
+.popup-plan-section > b {
+  display: block;
+  color: #f4c542;
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.plan-link {
+  display: block;
+  margin: 4px 0;
+  padding: 6px 8px;
+  background: var(--navy2);
+  border: 1px solid #4a9eff;
+  border-radius: 5px;
+  color: #e8f2ff !important;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 700;
+}
+.plan-link:hover { background: #1a4a80; }
+.parcel-label {
+  background: #08121edb !important;
+  border: 1px solid #00c8ff !important;
+  border-radius: 3px;
+  color: #e9fbff !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  padding: 2px 4px !important;
+  white-space: nowrap !important;
+  box-shadow: 0 1px 4px #0008;
+}
+.parcel-label::before { display: none; }

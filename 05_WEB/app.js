@@ -1,10 +1,13 @@
 const map=L.map('map',{zoomControl:false,preferCanvas:true});
-L.control.zoom({position:'bottomright'}).addTo(map);
+L.control.zoom({position:'topright'}).addTo(map);
+L.control.scale({imperial:false,position:'bottomright'}).addTo(map);
 const imagery=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:20,attribution:'Tiles © Esri'}).addTo(map);
 const labels=L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:20,pane:'overlayPane'}).addTo(map);
 const topo=L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',{maxZoom:17,attribution:'© OpenTopoMap'});
+const grey=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',{maxZoom:18,attribution:'Esri Light Gray'});
+const basemaps={satellite:imagery,topo,grey};let activeBasemap=imagery;
 const layers={}, towerIndex=new Map();
-const loading=document.getElementById('loading');
+const loading=document.getElementById('loading-overlay');
 const safe=v=>v??'—';
 const nav=(lat,lng)=>`https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
 async function json(path){const r=await fetch(path);if(!r.ok)throw new Error(`${path}: ${r.status}`);return r.json()}
@@ -25,10 +28,18 @@ const defs=[
 async function buildLayer(path,name,opt){const data=await json(`data/${path}`);const layer=L.geoJSON(data,{style:opt.style,onEachFeature:(f,l)=>{if(opt.popup)l.bindPopup(opt.popup(f.properties||{}));}});layers[name]=layer;return layer}
 async function init(){try{
  const [buffer,axis]=await Promise.all(defs.slice(0,2).map(d=>buildLayer(...d)));buffer.addTo(map);axis.addTo(map);map.fitBounds(buffer.getBounds(),{padding:[20,20]});
- const towers=await json('data/linea/apoyos.geojson');layers['Sostegni']=L.geoJSON(towers,{pointToLayer:(f,ll)=>L.marker(ll,{icon:towerIcon(f)}),onEachFeature:(f,l)=>{const id=String(f.properties?.torre_id||'').toUpperCase();towerIndex.set(id,l);l.bindPopup(towerPopup(f,l.getLatLng()))}}).addTo(map);document.getElementById('metric-towers').textContent=towers.features.length;
+ const towers=await json('data/linea/apoyos.geojson');layers['Sostegni']=L.geoJSON(towers,{pointToLayer:(f,ll)=>L.marker(ll,{icon:towerIcon(f)}),onEachFeature:(f,l)=>{const id=String(f.properties?.torre_id||'').toUpperCase();towerIndex.set(id,l);l.bindPopup(towerPopup(f,l.getLatLng()))}}).addTo(map);
  const overlays={'Sostegni':layers['Sostegni'],'Asse della linea':axis,'Buffer operativo 400 m':buffer};
  for(const d of defs.slice(2)){const layer=await buildLayer(...d);overlays[d[1]]=layer;if(['Accessi temporanei','Aree argano e freno','Habitat Natura 2000'].includes(d[1]))layer.addTo(map)}
- L.control.layers({'Esri Satellite':imagery,'Carta topografica':topo},{'Etichette geografiche':labels,...overlays},{collapsed:false,position:'topright'}).addTo(map);
-}catch(e){console.error(e);loading.textContent='Errore nel caricamento dei dati';return}loading.remove()}
+ wireLayerControls();
+}catch(e){console.error(e);loading.innerHTML='<p>Errore nel caricamento dei dati</p>';return}loading.classList.add('hidden');setTimeout(()=>loading.remove(),450)}
 function searchTower(){const q=document.getElementById('tower-search').value.trim().toUpperCase().replace('PORT.','PORTALE');const result=document.getElementById('search-result');let pair=[...towerIndex].find(([id])=>id===q)||[...towerIndex].find(([id])=>id.includes(q));if(!q||!pair){result.textContent='Sostegno non trovato';return}const l=pair[1];map.setView(l.getLatLng(),18);l.openPopup();result.textContent=`Sostegno ${pair[0]} selezionato`}
-document.getElementById('search-btn').onclick=searchTower;document.getElementById('tower-search').addEventListener('keydown',e=>{if(e.key==='Enter')searchTower()});document.getElementById('sidebar-toggle').onclick=()=>document.getElementById('sidebar').classList.toggle('open');init();
+function wireLayerControls(){document.querySelectorAll('[data-layer]').forEach(input=>{const layer=layers[input.dataset.layer];if(!layer){input.disabled=true;return}if(input.checked&&!map.hasLayer(layer))layer.addTo(map);input.addEventListener('change',()=>input.checked?layer.addTo(map):map.removeLayer(layer))})}
+document.querySelectorAll('[data-basemap]').forEach(btn=>btn.addEventListener('click',()=>{map.removeLayer(activeBasemap);activeBasemap=basemaps[btn.dataset.basemap];activeBasemap.addTo(map);if(btn.dataset.basemap==='satellite')labels.addTo(map);else if(map.hasLayer(labels))map.removeLayer(labels);document.querySelectorAll('[data-basemap]').forEach(b=>b.classList.toggle('active',b===btn))}));
+function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('sidebar-backdrop').classList.toggle('visible')}
+document.getElementById('btn-menu-toggle').onclick=toggleSidebar;document.getElementById('btn-sidebar-close').onclick=toggleSidebar;document.getElementById('sidebar-backdrop').onclick=toggleSidebar;
+function wgs84ToUtm32(lat,lng){const a=6378137,f=1/298.257223563,k=.9996,e2=f*(2-f),ep2=e2/(1-e2),lon0=9*Math.PI/180,la=lat*Math.PI/180,lo=lng*Math.PI/180,s=Math.sin(la),c=Math.cos(la),t=Math.tan(la),n=a/Math.sqrt(1-e2*s*s),tt=t*t,cc=ep2*c*c,aa=c*(lo-lon0),m=a*((1-e2/4-3*e2**2/64-5*e2**3/256)*la-(3*e2/8+3*e2**2/32+45*e2**3/1024)*Math.sin(2*la)+(15*e2**2/256+45*e2**3/1024)*Math.sin(4*la)-(35*e2**3/3072)*Math.sin(6*la));return{e:k*n*(aa+(1-tt+cc)*aa**3/6+(5-18*tt+tt**2+72*cc-58*ep2)*aa**5/120)+500000,n:k*(m+n*t*(aa**2/2+(5-tt+9*cc+4*cc**2)*aa**4/24+(61-58*tt+tt**2+600*cc-330*ep2)*aa**6/720))}}
+map.on('mousemove',ev=>{const u=wgs84ToUtm32(ev.latlng.lat,ev.latlng.lng);document.getElementById('coords-bar').innerHTML=`Lat: ${ev.latlng.lat.toFixed(5)} &nbsp; Lng: ${ev.latlng.lng.toFixed(5)} &nbsp; | &nbsp; UTM32N EPSG:25832 E: ${u.e.toFixed(1)} &nbsp; N: ${u.n.toFixed(1)}`});
+const Locate=L.Control.extend({options:{position:'topright'},onAdd(){const b=L.DomUtil.create('button','leaflet-bar locate-btn');b.title='Mostra la mia posizione';b.innerHTML='◎';L.DomEvent.disableClickPropagation(b);L.DomEvent.on(b,'click',()=>navigator.geolocation?navigator.geolocation.getCurrentPosition(p=>map.flyTo([p.coords.latitude,p.coords.longitude],17),()=>alert('Posizione non disponibile')):alert('Geolocalizzazione non supportata'));return b}});map.addControl(new Locate());
+let measure=false,pts=[],draw=[];const Measure=L.Control.extend({options:{position:'topright'},onAdd(){const b=L.DomUtil.create('button','leaflet-bar measure-btn');b.title='Misura distanza';b.innerHTML='↔';L.DomEvent.disableClickPropagation(b);L.DomEvent.on(b,'click',()=>{measure=!measure;b.classList.toggle('active',measure);map.getContainer().style.cursor=measure?'crosshair':'';if(!measure){draw.forEach(x=>map.removeLayer(x));draw=[];pts=[];document.getElementById('measure-result').classList.add('hidden')}});return b}});map.addControl(new Measure());map.on('click',e=>{if(!measure)return;if(pts.length===2){draw.forEach(x=>map.removeLayer(x));draw=[];pts=[]}pts.push(e.latlng);draw.push(L.circleMarker(e.latlng,{radius:5,color:'#fff',fillColor:'#ff7700',fillOpacity:1}).addTo(map));if(pts.length===2){draw.push(L.polyline(pts,{color:'#ff7700',weight:3,dashArray:'7 5'}).addTo(map));const d=pts[0].distanceTo(pts[1]),el=document.getElementById('measure-result');el.textContent=d>1000?`${(d/1000).toFixed(3)} km`:`${Math.round(d)} m`;el.classList.remove('hidden')}});
+document.getElementById('search-btn').onclick=searchTower;document.getElementById('tower-search').addEventListener('keydown',e=>{if(e.key==='Enter')searchTower()});init();

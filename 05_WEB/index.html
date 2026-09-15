@@ -1,56 +1,25 @@
-<!doctype html>
-<html lang="it">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#063f87">
-  <title>WebGIS Quartaie–Molassana | ELECNOR</title>
-  <link rel="preconnect" href="https://unpkg.com">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="topbar">
-    <div class="brand"><span class="brand-mark"></span><div><strong>ELECNOR</strong><small>Progetto 23842B1</small></div></div>
-    <div class="title"><h1>Linea 132 kV Quartaie–Molassana</h1><p>Piano di stendimento · WebGIS di progetto</p></div>
-    <div class="status"><span class="pulse"></span>Stato aggiornamento: 15.09.2026</div>
-  </header>
-  <main>
-    <aside id="sidebar" class="sidebar">
-      <section class="search-card">
-        <label for="tower-search">Ricerca sostegno</label>
-        <div class="search-row"><input id="tower-search" placeholder="Es. 267 o Molassana"><button id="search-btn">Cerca</button></div>
-        <div id="search-result" class="search-result" aria-live="polite"></div>
-      </section>
-      <section>
-        <h2>Quadro del progetto</h2>
-        <div class="metrics">
-          <div><b id="metric-towers">—</b><span>Sostegni</span></div>
-          <div><b>6</b><span>Tirate</span></div>
-          <div><b>400 m</b><span>Buffer</span></div>
-        </div>
-      </section>
-      <section>
-        <h2>Legenda</h2>
-        <div class="legend-grid">
-          <span><i class="swatch tower anchor"></i>Amarro</span><span><i class="swatch tower suspension"></i>Sospensione</span>
-          <span><i class="swatch line-axis"></i>Asse linea</span><span><i class="swatch machine"></i>Aree macchine</span>
-          <span><i class="swatch access"></i>Accessi temporanei</span><span><i class="swatch flood"></i>Pericolosità alluvionale</span>
-          <span><i class="swatch habitat"></i>Habitat Natura 2000</span><span><i class="swatch parcel"></i>Catasto</span>
-        </div>
-      </section>
-      <section class="documents">
-        <h2>Documenti</h2>
-        <a href="assets/pdf/23842B1_Piano_di_stendimento.pdf" target="_blank">Piano di stendimento (PDF)</a>
-        <a href="assets/pdf/23842B1_Piano_di_stendimento.xlsx">Piano di stendimento (Excel)</a>
-      </section>
-      <section class="note"><strong>Nota</strong><p>Strumento operativo di consultazione. Le geometrie non sostituiscono gli elaborati esecutivi approvati.</p></section>
-    </aside>
-    <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Apri o chiudi pannello">☰</button>
-    <div id="map"></div>
-    <div id="loading" class="loading"><span></span>Caricamento dati…</div>
-  </main>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-  <script src="app.js"></script>
-</body>
-</html>
+<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#16213e"><title>Quartaie–Molassana | WebGIS di progetto</title><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="style.css"></head><body>
+<div id="loading-overlay"><div class="spinner"></div><p>Caricamento dei dati cartografici…</p></div>
+<header id="header"><div class="logo-mark"><span></span><strong>ELECNOR</strong></div><div class="subtitle"><strong>Linea 132 kV Quartaie–Molassana</strong>Piano di stendimento · Progetto 23842B1</div><div class="deploy-status">Stato aggiornamento: 15.09.2026</div><div class="header-spacer"></div><div class="header-author"><span>ELECNOR</span><small>WebGIS operativo</small></div><button id="btn-menu-toggle" aria-label="Apri menu">☰</button></header>
+<div id="main"><div id="sidebar-backdrop"></div><nav id="sidebar"><div id="sidebar-mobile-header"><span>Livelli / Legenda</span><button id="btn-sidebar-close">×</button></div><div id="sidebar-inner">
+<div class="search-box"><label for="tower-search">Ricerca sostegno</label><div><input id="tower-search" placeholder="Es. 267 o Molassana"><button id="search-btn">Vai</button></div><p id="search-result"></p></div>
+<div class="section-title">Linea elettrica</div>
+<label class="layer-item"><input type="checkbox" data-layer="Sostegni" checked><span class="double-swatch"><i class="tower-square anchor"></i><i class="tower-square suspension"></i></span><span>Sostegni (114)</span></label>
+<label class="layer-item"><input type="checkbox" data-layer="Asse della linea" checked><i class="line-swatch axis"></i><span>Asse della linea</span></label>
+<label class="layer-item"><input type="checkbox" data-layer="Buffer operativo 400 m" checked><i class="area-swatch buffer"></i><span>Buffer operativo ±400 m</span></label>
+<div class="tower-legend-box"><div><i class="tower-square anchor"></i> Amarro</div><div><i class="tower-square suspension"></i> Sospensione</div></div>
+<div class="section-title">Cantierizzazione</div>
+<label class="layer-item"><input type="checkbox" data-layer="Accessi temporanei" checked><i class="line-swatch access"></i><span>Accessi temporanei</span></label>
+<label class="layer-item"><input type="checkbox" data-layer="Strade temporanee 3,5 m"><i class="area-swatch temporary"></i><span>Strade temporanee 3,5 m</span></label>
+<label class="layer-item"><input type="checkbox" data-layer="Aree argano e freno" checked><i class="area-swatch machine"></i><span>Aree argano e freno</span></label>
+<div class="section-title">Ambiente</div>
+<label class="layer-item"><input type="checkbox" data-layer="Habitat Natura 2000" checked><i class="area-swatch habitat"></i><span>Habitat Natura 2000</span></label>
+<label class="layer-item"><input type="checkbox" data-layer="Pericolosità alluvionale"><i class="area-swatch flood"></i><span>Pericolosità alluvionale</span></label>
+<div class="section-title">Catasto e infrastrutture</div>
+<label class="layer-item"><input type="checkbox" data-layer="Particelle catastali"><i class="area-swatch parcel"></i><span>Particelle catastali</span></label>
+<label class="layer-item"><input type="checkbox" data-layer="Fabbricati catastali"><i class="area-swatch building"></i><span>Fabbricati catastali</span></label>
+<label class="layer-item"><input type="checkbox" data-layer="Rete viaria"><i class="line-swatch road"></i><span>Rete viaria</span></label>
+<div class="section-title">Carta di base</div><button class="basemap-btn active" data-basemap="satellite">Satellite Esri (standard)</button><button class="basemap-btn" data-basemap="topo">Topografia</button><button class="basemap-btn" data-basemap="grey">Grigio (progettazione)</button>
+<div class="section-title">Documenti</div><a class="document-link" href="assets/pdf/23842B1_Piano_di_stendimento.pdf" target="_blank">Piano di stendimento · PDF</a><a class="document-link" href="assets/pdf/23842B1_Piano_di_stendimento.xlsx">Piano di stendimento · Excel</a>
+<div class="info-box"><strong>Quadro del progetto</strong>Linea 132 kV Quartaie–Molassana<br>6 tirate · 114 sostegni<br>CRS progetto: ETRS89 / UTM 32N<br>Web: EPSG:4326</div><div class="sidebar-credits"><b>ELECNOR</b><span>Strumento operativo di consultazione</span><span>© 2026 · Progetto 23842B1</span></div>
+</div></nav><div id="map"></div></div><div id="measure-result" class="hidden"></div><div id="coords-bar">Lat: — &nbsp; Lng: — &nbsp; | &nbsp; UTM32N EPSG:25832 E: — &nbsp; N: —</div><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="app.js"></script></body></html>

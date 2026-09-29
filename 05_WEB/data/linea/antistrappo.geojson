@@ -1,0 +1,306 @@
+{
+    "type":  "FeatureCollection",
+    "name":  "antistrappo",
+    "features":  [
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "229",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  9,
+                                            "utm_norte":  4918717.65,
+                                            "utm_este":  516957.49,
+                                            "cota_z":  179.03,
+                                            "altura_m":  25.3,
+                                            "prog_linea":  "1287.877766032762",
+                                            "prog_tramo":  "0.01342212876426637",
+                                            "antistrappo":  "SI",
+                                            "layer":  "ANTISTRAPPO",
+                                            "torre_id_visual":  "229"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.213022,
+                                                              44.421553
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "237",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  17,
+                                            "utm_norte":  4919490.86,
+                                            "utm_este":  515557.44,
+                                            "cota_z":  237.85,
+                                            "altura_m":  22.1,
+                                            "prog_linea":  "2896.4737335085556",
+                                            "prog_tramo":  "0.2332523386886752",
+                                            "antistrappo":  "SI",
+                                            "layer":  "ANTISTRAPPO",
+                                            "torre_id_visual":  "237"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.195458,
+                                                              44.428546
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "241",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  21,
+                                            "utm_norte":  4919715.4,
+                                            "utm_este":  515063.0,
+                                            "cota_z":  220.72,
+                                            "altura_m":  22.1,
+                                            "prog_linea":  "3439.5113001880154",
+                                            "prog_tramo":  "0.15798886169472734",
+                                            "antistrappo":  "SI",
+                                            "layer":  "ANTISTRAPPO",
+                                            "torre_id_visual":  "241"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.189253,
+                                                              44.430578
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "243",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  23,
+                                            "utm_norte":  4919848.34,
+                                            "utm_este":  514758.46,
+                                            "cota_z":  215.9,
+                                            "altura_m":  22.4,
+                                            "prog_linea":  "3771.8709882600106",
+                                            "prog_tramo":  "0.07035547048398369",
+                                            "antistrappo":  "SI",
+                                            "layer":  "ANTISTRAPPO",
+                                            "torre_id_visual":  "243"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.18543,
+                                                              44.431781
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "246",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  26,
+                                            "utm_norte":  4920072.41,
+                                            "utm_este":  514166.11,
+                                            "cota_z":  190.39,
+                                            "altura_m":  25.4,
+                                            "prog_linea":  "4405.358633056741",
+                                            "prog_tramo":  "0.07523681944485067",
+                                            "antistrappo":  "SI",
+                                            "layer":  "ANTISTRAPPO",
+                                            "torre_id_visual":  "246"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.177994,
+                                                              44.43381
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "253",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  33,
+                                            "utm_norte":  4920362.5,
+                                            "utm_este":  512768.56,
+                                            "cota_z":  206.6,
+                                            "altura_m":  21.8,
+                                            "prog_linea":  "5858.210780862653",
+                                            "prog_tramo":  "19.29847258688531",
+                                            "antistrappo":  "SI",
+                                            "layer":  "ANTISTRAPPO",
+                                            "torre_id_visual":  "253"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.160441,
+                                                              44.436448
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "257",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  37,
+                                            "utm_norte":  4920348.21,
+                                            "utm_este":  512047.17,
+                                            "cota_z":  280.12,
+                                            "altura_m":  28.0,
+                                            "prog_linea":  "6657.628354609475",
+                                            "prog_tramo":  "24.435450330869955",
+                                            "antistrappo":  "SI",
+                                            "layer":  "ANTISTRAPPO",
+                                            "torre_id_visual":  "257"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.151376,
+                                                              44.436331
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "259",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  39,
+                                            "utm_norte":  4920371.21,
+                                            "utm_este":  511672.41,
+                                            "cota_z":  329.73,
+                                            "altura_m":  22.2,
+                                            "prog_linea":  "7033.0937924706495",
+                                            "prog_tramo":  "0.10627375149097866",
+                                            "antistrappo":  "SI",
+                                            "layer":  "ANTISTRAPPO",
+                                            "torre_id_visual":  "259"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.146668,
+                                                              44.436545
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "266",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  46,
+                                            "utm_norte":  4920445.74,
+                                            "utm_este":  510196.51,
+                                            "cota_z":  307.92,
+                                            "altura_m":  35.5,
+                                            "prog_linea":  "8511.127279616163",
+                                            "prog_tramo":  "38.61313045855848",
+                                            "antistrappo":  "SI",
+                                            "layer":  "ANTISTRAPPO",
+                                            "torre_id_visual":  "266"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.128124,
+                                                              44.437238
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "269",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  49,
+                                            "utm_norte":  4920485.75,
+                                            "utm_este":  509710.43,
+                                            "cota_z":  347.3,
+                                            "altura_m":  22.6,
+                                            "prog_linea":  "9037.698905881498",
+                                            "prog_tramo":  "17.425627426632857",
+                                            "antistrappo":  "SI",
+                                            "layer":  "ANTISTRAPPO",
+                                            "torre_id_visual":  "269"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.122017,
+                                                              44.437605
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "274",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  54,
+                                            "utm_norte":  4920572.56,
+                                            "utm_este":  508599.08,
+                                            "cota_z":  668.83,
+                                            "altura_m":  29.5,
+                                            "prog_linea":  "10152.902711426703",
+                                            "prog_tramo":  "0.06119627324990555",
+                                            "antistrappo":  "SI",
+                                            "layer":  "ANTISTRAPPO",
+                                            "torre_id_visual":  "274"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.108054,
+                                                              44.4384
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "277",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "274-327",
+                                            "orden":  4,
+                                            "utm_norte":  4920619.35,
+                                            "utm_este":  508230.52,
+                                            "cota_z":  626.73,
+                                            "altura_m":  23.4,
+                                            "prog_linea":  "10524.421517281906",
+                                            "prog_tramo":  "4.705178400557496",
+                                            "antistrappo":  "SI",
+                                            "layer":  "ANTISTRAPPO",
+                                            "torre_id_visual":  "277"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.103423,
+                                                              44.438826
+                                                          ]
+                                      }
+                     }
+                 ]
+}

@@ -40,6 +40,24 @@ function towerIcon(f) {
     iconAnchor: [9, 9],
   });
 }
+function patIcon(f) {
+  const p = f.properties || {};
+  return L.divIcon({
+    className: "",
+    html: `<div class="pat-marker" title="PAT ${safe(p.torre_id_visual || p.torre_id)}">⏚</div>`,
+    iconSize: [24, 24],
+    iconAnchor: [12, 12],
+  });
+}
+function antiIcon(f) {
+  const p = f.properties || {};
+  return L.divIcon({
+    className: "",
+    html: `<div class="anti-marker" title="Antistrappo ${safe(p.torre_id_visual || p.torre_id)}"></div>`,
+    iconSize: [24, 24],
+    iconAnchor: [12, 12],
+  });
+}
 const TIRATA_PLANS = [
   { from: 225, to: 245, label: "Tirata 01 · 225–245" },
   { from: 245, to: 267, label: "Tirata 02 · 245–267" },
@@ -81,6 +99,28 @@ const defs = [
     "linea/ejes_linea.geojson",
     "Asse della linea",
     { style: { color: "#e11928", weight: 4 } },
+  ],
+  [
+    "linea/pat.geojson",
+    "PAT",
+    {
+      pointToLayer: (f, ll) => L.marker(ll, { icon: patIcon(f), zIndexOffset: 900 }),
+      popup: (p, f, l) => {
+        const ll = l.getLatLng();
+        return `<div class="popup-title">PAT · Sostegno ${safe(p.torre_id_visual || p.torre_id)}</div><div class="popup-grid"><b>Tipo</b><span>${safe(p.tipo)}</span><b>Tratto</b><span>${safe(p.tramo)}</span><b>Quota</b><span>${safe(p.cota_z)} m</span><b>UTM Est</b><span>${safe(p.utm_este)}</span><b>UTM Nord</b><span>${safe(p.utm_norte)}</span></div><a class="maps-link" target="_blank" href="${nav(ll.lat, ll.lng)}">Apri navigazione</a>`;
+      },
+    },
+  ],
+  [
+    "linea/antistrappo.geojson",
+    "Antistrappo",
+    {
+      pointToLayer: (f, ll) => L.marker(ll, { icon: antiIcon(f), zIndexOffset: 920 }),
+      popup: (p, f, l) => {
+        const ll = l.getLatLng();
+        return `<div class="popup-title">Antistrappo · Sostegno ${safe(p.torre_id_visual || p.torre_id)}</div><div class="popup-grid"><b>Tipo</b><span>${safe(p.tipo)}</span><b>Tratto</b><span>${safe(p.tramo)}</span><b>Quota</b><span>${safe(p.cota_z)} m</span><b>UTM Est</b><span>${safe(p.utm_este)}</span><b>UTM Nord</b><span>${safe(p.utm_norte)}</span></div><a class="maps-link" target="_blank" href="${nav(ll.lat, ll.lng)}">Apri navigazione</a>`;
+      },
+    },
   ],
   [
     "linea/vani_attese.geojson",
@@ -533,6 +573,8 @@ let map3d = null,
   is3d = false;
 const MAP3D_LAYER_GROUPS = {
   Sostegni: ["3d-tower-symbol", "3d-tower-label"],
+  PAT: ["3d-pat-symbol", "3d-pat-label"],
+  Antistrappo: ["3d-anti-symbol"],
   "Asse della linea": ["3d-axis"],
   "Vani con attese": ["3d-waits-line", "3d-waits-label"],
   "Buffer operativo 400 m": ["3d-buffer-fill", "3d-buffer-line"],
@@ -689,6 +731,49 @@ function init3d() {
     add3dGeoSource("waits", "linea/vani_attese.geojson");
     add3dLine("3d-waits-line", "waits", "#f4c542", 8);
     map3d.addLayer({id:"3d-waits-label",type:"symbol",source:"waits",layout:{"symbol-placement":"line-center","text-field":["concat",["to-string",["get","numero_sfere"]]," sfere"],"text-size":12,"text-allow-overlap":true},paint:{"text-color":"#111827","text-halo-color":"#f4c542","text-halo-width":4}});
+    add3dGeoSource("pat", "linea/pat.geojson");
+    map3d.addLayer({
+      id: "3d-pat-symbol",
+      type: "circle",
+      source: "pat",
+      paint: {
+        "circle-radius": 8,
+        "circle-color": "#ffd400",
+        "circle-stroke-color": "#111827",
+        "circle-stroke-width": 2.5,
+      },
+    });
+    map3d.addLayer({
+      id: "3d-pat-label",
+      type: "symbol",
+      source: "pat",
+      layout: {
+        "text-field": "⏚",
+        "text-size": 16,
+        "text-allow-overlap": true,
+      },
+      paint: {
+        "text-color": "#111827",
+        "text-halo-color": "#ffd400",
+        "text-halo-width": 1.5,
+      },
+    });
+    add3dGeoSource("anti", "linea/antistrappo.geojson");
+    map3d.addLayer({
+      id: "3d-anti-symbol",
+      type: "symbol",
+      source: "anti",
+      layout: {
+        "text-field": "▲",
+        "text-size": 20,
+        "text-allow-overlap": true,
+      },
+      paint: {
+        "text-color": "#d946ef",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1.5,
+      },
+    });
     add3dGeoSource("access", "wbk/accessi_temporanei.geojson");
     add3dLine("3d-access", "access", "#00b7d9", 4);
     add3dGeoSource("temp", "wbk/strade_temporanee_3_5m.geojson");
@@ -851,6 +936,26 @@ function init3d() {
       .setLngLat(e.lngLat)
       .setHTML(
         `<div class="popup-title">${safe(p.name)}</div><div class="popup-grid"><b>Indirizzo</b><span>${safe(p.address)}</span></div><a class="maps-link" target="_blank" href="${nav(e.lngLat.lat, e.lngLat.lng)}">Apri navigazione</a>`,
+      )
+      .addTo(map3d);
+  });
+  map3d.on("click", "3d-pat-symbol", (e) => {
+    if (measure3dActive) return;
+    const p = e.features?.[0]?.properties || {};
+    new maplibregl.Popup({ maxWidth: "300px" })
+      .setLngLat(e.lngLat)
+      .setHTML(
+        `<div class="popup-title">PAT · Sostegno ${safe(p.torre_id_visual || p.torre_id)}</div><div class="popup-grid"><b>Tipo</b><span>${safe(p.tipo)}</span><b>Tratto</b><span>${safe(p.tramo)}</span><b>Quota</b><span>${safe(p.cota_z)} m</span></div><a class="maps-link" target="_blank" href="${nav(e.lngLat.lat, e.lngLat.lng)}">Apri navigazione</a>`,
+      )
+      .addTo(map3d);
+  });
+  map3d.on("click", "3d-anti-symbol", (e) => {
+    if (measure3dActive) return;
+    const p = e.features?.[0]?.properties || {};
+    new maplibregl.Popup({ maxWidth: "300px" })
+      .setLngLat(e.lngLat)
+      .setHTML(
+        `<div class="popup-title">Antistrappo · Sostegno ${safe(p.torre_id_visual || p.torre_id)}</div><div class="popup-grid"><b>Tipo</b><span>${safe(p.tipo)}</span><b>Tratto</b><span>${safe(p.tramo)}</span><b>Quota</b><span>${safe(p.cota_z)} m</span></div><a class="maps-link" target="_blank" href="${nav(e.lngLat.lat, e.lngLat.lng)}">Apri navigazione</a>`,
       )
       .addTo(map3d);
   });

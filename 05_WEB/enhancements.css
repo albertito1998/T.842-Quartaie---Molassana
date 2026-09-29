@@ -45,6 +45,55 @@
   font-weight: 800;
   text-align: center;
 }
+
+.pat-swatch,
+.pat-marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  font-weight: 900;
+  color: #111827;
+  background: #ffd400;
+  border: 2px solid #111827;
+  box-shadow: 0 0 0 2px rgba(255,255,255,.9);
+}
+
+.pat-swatch {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 13px;
+}
+
+.pat-marker {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.anti-swatch,
+.anti-marker {
+  width: 0;
+  height: 0;
+  flex: none;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 18px solid #d946ef;
+  filter: drop-shadow(0 0 1px #fff) drop-shadow(0 1px 3px #0008);
+}
+
+.anti-swatch {
+  transform: scale(.72);
+  margin-left: -1px;
+  margin-right: -1px;
+}
+
+.anti-marker {
+  transform: translateY(-3px);
+}
 .view-mode-btn {
   display: inline-flex;
   align-items: center;

@@ -1,0 +1,856 @@
+{
+    "type":  "FeatureCollection",
+    "name":  "pat_puesta_a_tierra",
+    "features":  [
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "225",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  5,
+                                            "utm_norte":  4918351.83,
+                                            "utm_este":  517441.26,
+                                            "cota_z":  130.55,
+                                            "altura_m":  23.8,
+                                            "prog_linea":  "681.364829360195",
+                                            "prog_tramo":  "0.052856875511495635",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "225"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.219087,
+                                                              44.418249
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "233",
+                                            "tipo":  "SOSPENSIONE",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  13,
+                                            "utm_norte":  4919127.78,
+                                            "utm_este":  516360.48,
+                                            "cota_z":  201.37,
+                                            "altura_m":  22.5,
+                                            "prog_linea":  "2015.166959780451",
+                                            "prog_tramo":  "0.0871313159427642",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "233"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.205536,
+                                                              44.425259
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "243",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  23,
+                                            "utm_norte":  4919848.34,
+                                            "utm_este":  514758.46,
+                                            "cota_z":  215.9,
+                                            "altura_m":  22.4,
+                                            "prog_linea":  "3771.8709882600106",
+                                            "prog_tramo":  "0.07035547048398369",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "243"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.18543,
+                                                              44.431781
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "244",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  24,
+                                            "utm_norte":  4919983.1,
+                                            "utm_este":  514422.99,
+                                            "cota_z":  253.7,
+                                            "altura_m":  22.1,
+                                            "prog_linea":  "4133.396061387671",
+                                            "prog_tramo":  "2.6424098071384936",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "244"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.181219,
+                                                              44.433001
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "245",
+                                            "tipo":  "SOSPENSIONE",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  25,
+                                            "utm_norte":  4920001.35,
+                                            "utm_este":  514370.71,
+                                            "cota_z":  245.73,
+                                            "altura_m":  22.6,
+                                            "prog_linea":  "4188.769890043425",
+                                            "prog_tramo":  "0.09044954810557485",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "245"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.180563,
+                                                              44.433166
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "252",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  32,
+                                            "utm_norte":  4920380.83,
+                                            "utm_este":  513051.37,
+                                            "cota_z":  235.02,
+                                            "altura_m":  28.7,
+                                            "prog_linea":  "5574.807384623297",
+                                            "prog_tramo":  "0.05488212940371772",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "252"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.163995,
+                                                              44.436608
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "259",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  39,
+                                            "utm_norte":  4920371.21,
+                                            "utm_este":  511672.41,
+                                            "cota_z":  329.73,
+                                            "altura_m":  22.2,
+                                            "prog_linea":  "7033.0937924706495",
+                                            "prog_tramo":  "0.10627375149097866",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "259"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.146668,
+                                                              44.436545
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "260",
+                                            "tipo":  "SOSPENSIONE",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  40,
+                                            "utm_norte":  4920383.35,
+                                            "utm_este":  511464.76,
+                                            "cota_z":  433.0,
+                                            "altura_m":  30.4,
+                                            "prog_linea":  "7241.0983647761095",
+                                            "prog_tramo":  "0.037431969194453706",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "260"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.144059,
+                                                              44.436657
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "267",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  47,
+                                            "utm_norte":  4920544.11,
+                                            "utm_este":  510075.86,
+                                            "cota_z":  343.34,
+                                            "altura_m":  35.5,
+                                            "prog_linea":  "8666.797056387466",
+                                            "prog_tramo":  "44.991210321255195",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "267"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.12661,
+                                                              44.438125
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "271",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "000-QUAR-274",
+                                            "orden":  51,
+                                            "utm_norte":  4920512.69,
+                                            "utm_este":  509278.05,
+                                            "cota_z":  494.2,
+                                            "altura_m":  25.2,
+                                            "prog_linea":  "9470.920376577697",
+                                            "prog_tramo":  "0.011654565105994552",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "271"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.116585,
+                                                              44.437853
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "277",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "274-327",
+                                            "orden":  4,
+                                            "utm_norte":  4920619.35,
+                                            "utm_este":  508230.52,
+                                            "cota_z":  626.73,
+                                            "altura_m":  23.4,
+                                            "prog_linea":  "10524.421517281906",
+                                            "prog_tramo":  "4.705178400557496",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "277"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.103423,
+                                                              44.438826
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "278",
+                                            "tipo":  "SOSPENSIONE",
+                                            "tramo":  "274-327",
+                                            "orden":  5,
+                                            "utm_norte":  4920661.85,
+                                            "utm_este":  508030.67,
+                                            "cota_z":  604.9,
+                                            "altura_m":  24.8,
+                                            "prog_linea":  "10728.740563139148",
+                                            "prog_tramo":  "0.022679467929190823",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "278"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.100913,
+                                                              44.439211
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "281",
+                                            "tipo":  "SOSPENSIONE",
+                                            "tramo":  "274-327",
+                                            "orden":  8,
+                                            "utm_norte":  4920797.26,
+                                            "utm_este":  507392.85,
+                                            "cota_z":  480.1,
+                                            "altura_m":  22.5,
+                                            "prog_linea":  "11380.776111499019",
+                                            "prog_tramo":  "0.05928276912769414",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "281"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.0929,
+                                                              44.440437
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "282",
+                                            "tipo":  "SOSPENSIONE",
+                                            "tramo":  "274-327",
+                                            "orden":  9,
+                                            "utm_norte":  4920836.02,
+                                            "utm_este":  507208.36,
+                                            "cota_z":  450.78,
+                                            "altura_m":  22.4,
+                                            "prog_linea":  "11569.293743830796",
+                                            "prog_tramo":  "0.2608300230191206",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "282"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.090582,
+                                                              44.440787
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "285",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "274-327",
+                                            "orden":  12,
+                                            "utm_norte":  4920919.0,
+                                            "utm_este":  506819.99,
+                                            "cota_z":  344.01,
+                                            "altura_m":  23.5,
+                                            "prog_linea":  "11966.429999865402",
+                                            "prog_tramo":  "0.011665082197802594",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "285"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.085703,
+                                                              44.441538
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "286",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "274-327",
+                                            "orden":  13,
+                                            "utm_norte":  4920994.11,
+                                            "utm_este":  506465.05,
+                                            "cota_z":  350.27,
+                                            "altura_m":  26.9,
+                                            "prog_linea":  "12329.230104192911",
+                                            "prog_tramo":  "0.11366442896693407",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "286"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.081243,
+                                                              44.442218
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "287",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "274-327",
+                                            "orden":  14,
+                                            "utm_norte":  4921032.08,
+                                            "utm_este":  506287.36,
+                                            "cota_z":  454.85,
+                                            "altura_m":  27.2,
+                                            "prog_linea":  "12510.931664450332",
+                                            "prog_tramo":  "4.264456883162239",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "287"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.079011,
+                                                              44.442561
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "293",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "274-327",
+                                            "orden":  20,
+                                            "utm_norte":  4921298.13,
+                                            "utm_este":  504893.2,
+                                            "cota_z":  418.31,
+                                            "altura_m":  29.1,
+                                            "prog_linea":  "13938.88381723165",
+                                            "prog_tramo":  "12.680248723413385",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "293"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.061494,
+                                                              44.444967
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "297",
+                                            "tipo":  "SOSPENSIONE",
+                                            "tramo":  "274-327",
+                                            "orden":  24,
+                                            "utm_norte":  4921570.44,
+                                            "utm_este":  504055.65,
+                                            "cota_z":  544.39,
+                                            "altura_m":  26.3,
+                                            "prog_linea":  "14819.656064117504",
+                                            "prog_tramo":  "0.1029706678875728",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "297"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.05097,
+                                                              44.447424
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "301",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "274-327",
+                                            "orden":  28,
+                                            "utm_norte":  4921914.59,
+                                            "utm_este":  503477.48,
+                                            "cota_z":  407.52,
+                                            "altura_m":  22.3,
+                                            "prog_linea":  "15496.681042339156",
+                                            "prog_tramo":  "0.05053940088228076",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "301"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.043706,
+                                                              44.450525
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "302",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "274-327",
+                                            "orden":  29,
+                                            "utm_norte":  4922091.9,
+                                            "utm_este":  503215.19,
+                                            "cota_z":  332.46,
+                                            "altura_m":  21.7,
+                                            "prog_linea":  "15813.279968743169",
+                                            "prog_tramo":  "15.890735227852822",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "302"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.040411,
+                                                              44.452123
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "304",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "274-327",
+                                            "orden":  31,
+                                            "utm_norte":  4922149.78,
+                                            "utm_este":  503039.72,
+                                            "cota_z":  262.1,
+                                            "altura_m":  22.8,
+                                            "prog_linea":  "15998.049765537226",
+                                            "prog_tramo":  "0.05915645279819648",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "304"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.038206,
+                                                              44.452645
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "309",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "274-327",
+                                            "orden":  36,
+                                            "utm_norte":  4922404.63,
+                                            "utm_este":  502203.62,
+                                            "cota_z":  306.13,
+                                            "altura_m":  24.4,
+                                            "prog_linea":  "16882.681920246",
+                                            "prog_tramo":  "0.4659637168235292",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "309"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.027698,
+                                                              44.454942
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "310",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "274-327",
+                                            "orden":  37,
+                                            "utm_norte":  4922487.76,
+                                            "utm_este":  502067.92,
+                                            "cota_z":  273.56,
+                                            "altura_m":  26.4,
+                                            "prog_linea":  "17041.820497907058",
+                                            "prog_tramo":  "0.5378926190721477",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "310"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.025993,
+                                                              44.455691
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "311",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "274-327",
+                                            "orden":  38,
+                                            "utm_norte":  4922608.88,
+                                            "utm_este":  501874.31,
+                                            "cota_z":  284.38,
+                                            "altura_m":  23.2,
+                                            "prog_linea":  "17270.194941529855",
+                                            "prog_tramo":  "0.21075896865186614",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "311"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.023559,
+                                                              44.456782
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "317",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "274-327",
+                                            "orden":  44,
+                                            "utm_norte":  4922781.7,
+                                            "utm_este":  500811.81,
+                                            "cota_z":  242.06,
+                                            "altura_m":  32.4,
+                                            "prog_linea":  "18389.690606404874",
+                                            "prog_tramo":  "0.42216857410689745",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "317"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.010204,
+                                                              44.458339
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "319",
+                                            "tipo":  "SOSPENSIONE",
+                                            "tramo":  "274-327",
+                                            "orden":  46,
+                                            "utm_norte":  4922770.83,
+                                            "utm_este":  500507.05,
+                                            "cota_z":  338.97,
+                                            "altura_m":  32.9,
+                                            "prog_linea":  "18694.648964839944",
+                                            "prog_tramo":  "0.06910331234180363",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "319"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.006374,
+                                                              44.458242
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "320",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "274-327",
+                                            "orden":  47,
+                                            "utm_norte":  4922764.41,
+                                            "utm_este":  500304.02,
+                                            "cota_z":  402.55,
+                                            "altura_m":  32.3,
+                                            "prog_linea":  "18897.78044270585",
+                                            "prog_tramo":  "0.12230691728231466",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "320"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              9.003822,
+                                                              44.458184
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "323",
+                                            "tipo":  "SOSPENSIONE",
+                                            "tramo":  "274-327",
+                                            "orden":  50,
+                                            "utm_norte":  4922612.23,
+                                            "utm_este":  499878.52,
+                                            "cota_z":  369.67,
+                                            "altura_m":  39.8,
+                                            "prog_linea":  "19391.337179084356",
+                                            "prog_tramo":  "1.3843399018216598",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "323"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              8.998473,
+                                                              44.456814
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "324",
+                                            "tipo":  "SOSPENSIONE",
+                                            "tramo":  "274-327",
+                                            "orden":  51,
+                                            "utm_norte":  4922554.46,
+                                            "utm_este":  499815.46,
+                                            "cota_z":  350.05,
+                                            "altura_m":  46.4,
+                                            "prog_linea":  "19476.858734846955",
+                                            "prog_tramo":  "0.44443559662661736",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "324"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              8.99768,
+                                                              44.456294
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "325",
+                                            "tipo":  "SOSPENSIONE",
+                                            "tramo":  "274-327",
+                                            "orden":  52,
+                                            "utm_norte":  4922270.44,
+                                            "utm_este":  499510.22,
+                                            "cota_z":  179.54,
+                                            "altura_m":  43.9,
+                                            "prog_linea":  "19893.79856024119",
+                                            "prog_tramo":  "2.062402485157886",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "325"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              8.993844,
+                                                              44.453737
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "329",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "327-999-MOLA",
+                                            "orden":  3,
+                                            "utm_norte":  4921854.05,
+                                            "utm_este":  498598.24,
+                                            "cota_z":  302.15,
+                                            "altura_m":  42.8,
+                                            "prog_linea":  "20987.815363533326",
+                                            "prog_tramo":  "0.019830874313987293",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "329"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              8.982382,
+                                                              44.449987
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "330",
+                                            "tipo":  "SOSPENSIONE",
+                                            "tramo":  "327-999-MOLA",
+                                            "orden":  4,
+                                            "utm_norte":  4921857.79,
+                                            "utm_este":  498367.81,
+                                            "cota_z":  233.22,
+                                            "altura_m":  35.3,
+                                            "prog_linea":  "21218.2757126175",
+                                            "prog_tramo":  "0.046790893405343564",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "330"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              8.979486,
+                                                              44.45002
+                                                          ]
+                                      }
+                     },
+                     {
+                         "type":  "Feature",
+                         "properties":  {
+                                            "torre_id":  "999-MOLA",
+                                            "tipo":  "AMARRO",
+                                            "tramo":  "327-999-MOLA",
+                                            "orden":  6,
+                                            "utm_norte":  4921918.83,
+                                            "utm_este":  498081.73,
+                                            "cota_z":  67.71,
+                                            "altura_m":  17.6,
+                                            "prog_linea":  "21527.971468513",
+                                            "prog_tramo":  "",
+                                            "pat":  "SI",
+                                            "layer":  "PAT",
+                                            "torre_id_visual":  "PORTALE MASSANA / 999-MOLA"
+                                        },
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              8.97589,
+                                                              44.450569
+                                                          ]
+                                      }
+                     }
+                 ]
+}
